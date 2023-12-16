@@ -15,6 +15,7 @@ import ContentScreen from './contents_screen';
 import DetailVideoScreen from './detail_videos_screen';
 import HomeScreen from './home_screen';
 import LibraryScreen from './library_screen';
+import VideoScreen from './video_screen';
 
 const Tab = createBottomTabNavigator();
 type TabBarOptions = {
@@ -54,7 +55,7 @@ export default function MainScreen() {
         />
         <Tab.Screen
           name="Video"
-          component={DetailVideoScreen}
+          component={VideoScreen}
           options={{
             tabBarIcon: ({}) => {
               return <Film color="black" size={17} strokeWidth={2.7} />;

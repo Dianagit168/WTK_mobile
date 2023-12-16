@@ -1,17 +1,18 @@
-import { View, Text } from "react-native";
-import React from "react";
+import {View, Text} from 'react-native';
+import React from 'react';
 interface sbtProp {
   contentT: string;
   colorT: string;
   fontSizeT: number;
-  
 }
 
-
-export default function SemiBoldText({ contentT, colorT, fontSizeT }:sbtProp) {
+export default function SemiBoldText({contentT, colorT, fontSizeT}: sbtProp) {
   return (
     <View>
-      <Text style={{ fontWeight: "500", fontSize: fontSizeT, color: colorT }}>
+      <Text
+        numberOfLines={1}
+        ellipsizeMode="tail"
+        style={{fontWeight: '500', fontSize: fontSizeT, color: colorT}}>
         {contentT}
       </Text>
     </View>

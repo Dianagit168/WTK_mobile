@@ -1,72 +1,61 @@
-import {View, Text, StyleSheet, FlatList} from 'react-native';
+import {View, Text, StyleSheet, FlatList, Image} from 'react-native';
 import React from 'react';
 import brandingColor from './branding_color';
-const DATA = [
-  {
-    content: 'Content1',
-    tamNail: 'TAMNAIL1',
-    author: 'Author1',
-    pharagraph: 'pharagraph1',
-  },
-  {
-    content: 'Content21',
-    tamNail: 'TAMNAIL2',
-    author: 'Author2',
-    pharagraph: 'pharagraph2',
-  },
-  {
-    content: 'Content3',
-    tamNail: 'TAMNAIL3',
-    author: 'Author3',
-    pharagraph: 'pharagraph3',
-  },
-];
+import SemiBoldText from './semi_bold_text';
+import BoldText from './bold_text';
+interface ListContentCourseProps {
+  tamnail: string;
+  pharagraph: string;
+  objContent: string;
+
+  author: string;
+  height: number;
+  width: number;
+}
 
 export default function ListContentCourse({
-  content,
+  tamnail,
   pharagraph,
-  btn,
-  onPress,
+  objContent,
+  author,
   height,
   width,
-  padding,
-}: any) {
+}: ListContentCourseProps) {
   return (
     <View>
       <View style={styleListContentCourse.listContentCourse}>
-        <Text style={styleListContentCourse.txtStyle}>{content}</Text>
-        <Text onPress={onPress} style={styleListContentCourse.txtBtnStyle}>
-          {btn}
-        </Text>
+        <Text style={styleListContentCourse.txtStyle}>{objContent}</Text>
+        <Text style={styleListContentCourse.txtBtnStyle}>See all</Text>
       </View>
       <FlatList
         horizontal
-        data={DATA}
-        renderItem={({item}) => (
-          <View
-            style={{
-              marginRight: 10,
-              marginTop: 10,
-
-              width: width,
-
-              paddingBottom: 8,
-            }}>
-            <View
-              style={{
-                marginBottom: 7,
-                height: height,
-                width: width,
-                borderRadius: 10,
-                backgroundColor: brandingColor.blue30,
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}>
-              <Text>{item.tamNail}</Text>
+        data={[...Array(5)]}
+        renderItem={({}) => (
+          <View style={{width: width}}>
+            <View style={styleListContentCourse.imageContainer}>
+              <Image
+                source={{
+                  uri: tamnail,
+                }}
+                style={styleListContentCourse.image}
+                {...{height: height}}
+              />
             </View>
-            <Text style={styleListContentCourse.txtStyle}>{item.content}</Text>
-            <Text style={{padding: padding}}> {pharagraph}</Text>
-            <Text>by {item.author}</Text>
+            <View style={{marginRight: 15}}>
+              <BoldText
+                contentT={pharagraph}
+                colorT={brandingColor.blueBlack100}
+                fontSizeT={12}
+                backColorI={''}
+                paddingVer={0}
+                paddingHor={0}
+              />
+              <SemiBoldText
+                contentT={author}
+                colorT={brandingColor.blueBlack60}
+                fontSizeT={10}
+              />
+            </View>
           </View>
         )}
       />
@@ -85,5 +74,20 @@ const styleListContentCourse = StyleSheet.create({
   },
   txtBtnStyle: {
     color: brandingColor.blue60,
+  },
+  imageContainer: {
+    marginTop: 10,
+    marginBottom: 10,
+    backgroundColor: brandingColor.pink,
+    marginRight: 15,
+    borderRadius: 8,
+    overflow: 'hidden',
+  },
+  image: {
+    resizeMode: 'cover',
+  },
+  overlay: {
+    ...StyleSheet.absoluteFillObject,
+    justifyContent: 'space-between',
   },
 });

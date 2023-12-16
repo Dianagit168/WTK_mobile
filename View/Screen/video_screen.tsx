@@ -30,41 +30,50 @@ export default function VideoScreen() {
         />
 
         <CarouselCustom
-          height={170}
-          width={250}
-          content={undefined}
-          pharagraph={undefined}
-          btn={undefined}
-          onPress={undefined}
-          padding={undefined}
+          tamnail={
+            'https://api.weteka.org/public/orgs/undefined/images/6a99511d-9b7f-4a76-a5ce-6ebf607fbb5d.png'
+          }
+          news={'Education'}
+          content={'សីលធម៌-ពលរដ្ឋវិជ្ជា ថ្នាក់ទី១២'}
+          itemWidth={200}
+          inactiveSlideScale={0.8}
+          sliderWidth={350}
+          contentBook={''}
+          newsBack={brandingColor.blueBlack100}
+          contentBack={brandingColor.blue30}
         />
 
         <ListContentCourse
-          content={'Math'}
-          btn={'See all'}
+          tamnail={
+            'https://api.weteka.org/public/orgs/633b909c47978679369cb69e/images/cb0ec7d5-e6eb-412b-8bdd-0b2374f54d57.jpg'
+          }
+          pharagraph={'គណិតវិទ្យាថ្នាក់ទី៩'}
+          objContent={'Math'}
           height={100}
-          width={140}
-          pharagraph={undefined}
-          onPress={undefined}
-          padding={undefined}
+          width={170}
+          author={'By: Diana'}
         />
         <ListContentCourse
-          content={'Physic'}
-          btn={'See all'}
+          tamnail={
+            'https://api.weteka.org/public/orgs/undefined/images/a9c89872-6974-4af5-8682-a644cce7602c.png'
+          }
+          pharagraph={'ផែនដីវិទ្យា ថ្នាក់ទី១២'}
+          objContent={'Earth'}
           height={100}
-          width={140}
-          pharagraph={undefined}
-          onPress={undefined}
-          padding={undefined}
+          width={170}
+          author={'By: Diana'}
         />
         <ListContentCourse
-          content={'Network'}
-          btn={'See all'}
+          tamnail={
+            'https://api.weteka.org/public/orgs/63fc7c5751508ff62e6ce857/images/a2cc6199-a000-4de3-bcd9-c28df5cca0e4.png'
+          }
+          pharagraph={
+            'អក្សរសិល្ប៍ និង​ភាសា​ខ្មែរ​កណ្ដាល​តាម​រយៈ​សិលាចារឹក​នគរវត្ត'
+          }
+          objContent={'Aksor sel khmer'}
           height={100}
-          width={140}
-          pharagraph={undefined}
-          onPress={undefined}
-          padding={undefined}
+          width={170}
+          author={'By: Diana'}
         />
       </ScrollView>
     </SafeAreaView>

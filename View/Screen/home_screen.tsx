@@ -1,32 +1,26 @@
-import {
-  View,
-  Text,
-  ScrollView,
-  SafeAreaView,
-  StyleSheet,
-} from "react-native";
-import React from "react";
-import HeaderBar from "../components/header_bar";
-import brandingColor from "../components/branding_color";
-import Search from "../components/search";
-import ListContentCourse from "../components/listContentCourse";
-import ContentCourse from "../components/content_course";
+import {View, Text, ScrollView, SafeAreaView, StyleSheet} from 'react-native';
+import React from 'react';
+import HeaderBar from '../components/header_bar';
+import brandingColor from '../components/branding_color';
+import Search from '../components/search';
+import ListContentCourse from '../components/listContentCourse';
+import ContentCourse from '../components/content_course';
 
 export default function HomeScreen() {
   return (
-    <SafeAreaView style={{ paddingTop: 15, paddingBottom: 30 }}>
+    <SafeAreaView style={{paddingTop: 15, paddingBottom: 30}}>
       <View>
         <HeaderBar />
       </View>
-      <ScrollView style={{ marginHorizontal: 20 }}>
+      <ScrollView style={{marginHorizontal: 20}}>
         <Search
-          object={"Explore"}
-          leadingIcon={"search"}
-          placeHolder={"Find your courses"}
+          object={'Explore'}
+          leadingIcon={'search'}
+          placeHolder={'Find your courses'}
         />
         <ContentCourse
-          content={"Continue Course"}
-          btn={"See all"}
+          content={'Continue Course'}
+          btn={'See all'}
           onPress={undefined}
         />
         <View style={styleWidgetHomeScreen.containerOfChart}>
@@ -36,31 +30,49 @@ export default function HomeScreen() {
           <Text> Chart do not complete</Text>
         </View>
         <ListContentCourse
-          content={"Popular Course"}
-          btn={"See all"}
+          tamnail={
+            'https://api.weteka.org/public/orgs/633549822365046d36dc5d1c/images/be769047-17bc-4fff-8c81-78f347c7cfe6.webp'
+          }
+          pharagraph={
+            'Build better tools for the next generation of doers and innovators. '
+          }
+          objContent={'Popular Course'}
+          height={0}
+          width={0}
+          author={''}
+        />
+        <ListContentCourse
+          tamnail={
+            'https://api.weteka.org/public/orgs/633549822365046d36dc5d1c/images/be769047-17bc-4fff-8c81-78f347c7cfe6.webp'
+          }
+          pharagraph={
+            'Build better tools for the next generation of doers and innovators. '
+          }
+          objContent={'Popular Course'}
           height={100}
-          width={140}
-          pharagraph={undefined}
-          onPress={undefined}
-          padding={undefined}
+          width={170}
+          author={''}
         />
+
         <ListContentCourse
-          content={"Library"}
-          btn={"See all"}
-          height={170}
+          tamnail={
+            'https://api.weteka.org/public/orgs/63fc7c5751508ff62e6ce857/images/f99b06a1-2d5b-4313-b7a6-dd68362c8533.PNG'
+          }
+          pharagraph={'What’s going on with Vladimir Putin after the mutiny?'}
+          objContent={'Library'}
+          height={150}
           width={120}
-          pharagraph={undefined}
-          onPress={undefined}
-          padding={undefined}
+          author={'By: Diana'}
         />
         <ListContentCourse
-          content={"Kaset"}
-          pharagraph={"Phragraph"}
-          padding={8}
-          btn={"See all"}
+          tamnail={
+            'https://api.weteka.org/public/orgs/64dc811d25ce5ca36d40c64e/images/4f96b972-1a35-4711-b2bd-ff94c9db4cbc.jpg'
+          }
+          pharagraph={'“បើគេលែងត្រលប់”'}
+          objContent={'Kaset'}
           height={100}
-          width={140}
-          onPress={undefined}
+          width={170}
+          author={'By: Diana'}
         />
       </ScrollView>
     </SafeAreaView>
@@ -68,11 +80,11 @@ export default function HomeScreen() {
 }
 const styleWidgetHomeScreen = StyleSheet.create({
   containerOfChart: {
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
     marginTop: 10,
     height: 100,
     borderRadius: 16,
-    backgroundColor: brandingColor.blue3,
+    backgroundColor: brandingColor.blue30,
   },
 });

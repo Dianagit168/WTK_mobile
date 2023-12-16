@@ -5,6 +5,8 @@ interface btProp {
   colorT: string;
   backColorI: string;
   fontSizeT: number;
+  paddingVer: number;
+  paddingHor: number;
 }
 
 export default function BoldText({
@@ -12,6 +14,8 @@ export default function BoldText({
   colorT,
   fontSizeT,
   backColorI,
+  paddingHor,
+  paddingVer,
 }: btProp) {
   return (
     <View>
@@ -20,8 +24,8 @@ export default function BoldText({
         ellipsizeMode="tail"
         style={{
           borderRadius: 16,
-          paddingHorizontal: 10,
-          paddingVertical: 4,
+          paddingHorizontal: paddingHor,
+          paddingVertical: paddingVer,
           fontWeight: 'bold',
           fontSize: fontSizeT,
           color: colorT,
