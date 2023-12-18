@@ -54,26 +54,26 @@ export default function DetailVideoScreen() {
           <ChannelOrg />
 
           <View>
-            <TouchableOpacity style={styleForVideoDetail.subscribeContainer}>
-              <Text style={styleForVideoDetail.subscribetxt}>SUBSCRIBE</Text>
+            <TouchableOpacity style={styleForDetailBook.subscribeContainer}>
+              <Text style={styleForDetailBook.subscribetxt}>SUBSCRIBE</Text>
             </TouchableOpacity>
           </View>
         </View>
 
-        <View style={styleForVideoDetail.view1}>
-          <View style={styleForVideoDetail.backConOfIcon}>
+        <View style={styleForDetailBook.view1}>
+          <View style={styleForDetailBook.backConOfIcon}>
             <Heart color="black" size={17} strokeWidth={3.5} />
             <Text style={{marginLeft: 5, fontWeight: '500'}}>Like</Text>
           </View>
-          <View style={styleForVideoDetail.backConOfIcon}>
+          <View style={styleForDetailBook.backConOfIcon}>
             <MessageCircle color="black" size={17} strokeWidth={3.5} />
             <Text style={{marginLeft: 5, fontWeight: '500'}}>Comment</Text>
           </View>
-          <View style={styleForVideoDetail.backConOfIcon}>
+          <View style={styleForDetailBook.backConOfIcon}>
             <Forward color="black" size={17} strokeWidth={3.5} />
             <Text style={{marginLeft: 5, fontWeight: '500'}}>Share</Text>
           </View>
-          <View style={styleForVideoDetail.backConOfIcon}>
+          <View style={styleForDetailBook.backConOfIcon}>
             <Star color="black" size={17} strokeWidth={3.5} />
             <Text style={{marginLeft: 5, fontWeight: '500'}}>Star</Text>
           </View>
@@ -90,8 +90,8 @@ export default function DetailVideoScreen() {
 
 function ListVideo({isAudio: boolean = true}) {
   return (
-    <View style={styleForVideoDetail.backSubVideo}>
-      <View style={styleForVideoDetail.subVideoContainer}>
+    <View style={styleForDetailBook.backSubVideo}>
+      <View style={styleForDetailBook.subVideoContainer}>
         <SemiBoldText
           contentT={'KOOMPI'}
           fontSizeT={14}
@@ -118,13 +118,13 @@ function ListVideo({isAudio: boolean = true}) {
       <View style={{width: 18}}>
         <AudioLines color="black" size={17} strokeWidth={2.7} />
       </View>
-      <View style={styleForVideoDetail.backLesson}>
+      <View style={styleForDetailBook.backLesson}>
         <SemiBoldText contentT={'Lesson 1'} fontSizeT={11} colorT={'white'} />
       </View>
     </View>
   );
 }
-const styleForVideoDetail = StyleSheet.create({
+const styleForDetailBook = StyleSheet.create({
   videoContainer: {
     height: 300,
     backgroundColor: brandingColor.blueBlack30,

@@ -16,6 +16,7 @@ import DetailVideoScreen from './detail_videos_screen';
 import HomeScreen from './home_screen';
 import LibraryScreen from './library_screen';
 import VideoScreen from './video_screen';
+import DetailBook from './detail_book';
 
 const Tab = createBottomTabNavigator();
 type TabBarOptions = {

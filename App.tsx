@@ -30,6 +30,7 @@ import LibraryScreen from './View/Screen/library_screen';
 import VideoScreen from './View/Screen/video_screen';
 import ContentScreen from './View/Screen/contents_screen';
 import DetailVideoScreen from './View/Screen/detail_videos_screen';
+import DetailBook from './View/Screen/detail_book';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -54,9 +55,7 @@ function Section({children, title}: SectionProps): React.JSX.Element {
           {
             color: isDarkMode ? Colors.light : Colors.dark,
           },
-        ]}>
-        {children}
-      </Text>
+        ]}></Text>
     </View>
   );
 }
@@ -68,7 +67,7 @@ function App(): React.JSX.Element {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
-  return <MainScreen />;
+  return <DetailBook />;
 }
 
 const styles = StyleSheet.create({
