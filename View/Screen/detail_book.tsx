@@ -28,7 +28,7 @@ interface AboutTheBookAttrib {
 export default function DetailBook() {
   return (
     <SafeAreaView>
-      <ScrollView style={{paddingHorizontal: 10, marginBottom: 50}}>
+      <ScrollView style={{paddingHorizontal: 10}}>
         <View style={{justifyContent: 'center', alignItems: 'center'}}>
           <View style={styleForDetailBook.imageContainer}>
             <Image
@@ -74,7 +74,12 @@ export default function DetailBook() {
         <AboutTheBookAttrib nmtxt={'Language'} bldtxt={'Enlish'} />
         <AboutTheBookAttrib nmtxt={'Categories'} bldtxt={'Technology'} />
 
-        <BtnCustom obj={'Read'} BacColor={brandingColor.blueBlack100} borderRa={10} />
+        <BtnCustom
+          obj={'Read'}
+          bacColor={brandingColor.blueBlack100}
+          borderRa={10}
+          isIcon={false}
+        />
       </ScrollView>
     </SafeAreaView>
   );
@@ -104,6 +109,7 @@ function Rating() {
         fontSizeT={9}
         paddingVer={0}
         paddingHor={0}
+        numberOfLines={1}
       />
     </View>
   );
@@ -127,6 +133,7 @@ function AboutTheBookAttrib({nmtxt, bldtxt}: AboutTheBookAttrib) {
         fontSizeT={12}
         paddingVer={0}
         paddingHor={5}
+        numberOfLines={1}
       />
       <BoldText
         contentT={bldtxt}

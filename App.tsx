@@ -31,6 +31,8 @@ import VideoScreen from './View/Screen/video_screen';
 import ContentScreen from './View/Screen/contents_screen';
 import DetailVideoScreen from './View/Screen/detail_videos_screen';
 import DetailBook from './View/Screen/detail_book';
+import ReadTheBook from './View/Screen/read_the_book';
+import ReadKaset from './View/Screen/read_kaset';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -67,7 +69,7 @@ function App(): React.JSX.Element {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
-  return <DetailBook />;
+  return <ReadKaset />;
 }
 
 const styles = StyleSheet.create({

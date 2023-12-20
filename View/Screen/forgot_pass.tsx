@@ -30,7 +30,7 @@ export default function ForgotPass() {
             placeHolder={''}
           />
 
-          <BtnCustom obj={"Get code"} color={undefined} bor_radi={undefined} />
+          <BtnCustom obj={"Get code"} bacColor={""} borderRa={0}  />
         </View>
 
         <View>

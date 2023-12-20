@@ -35,7 +35,7 @@ type TabBarOptions = {
 export default function MainScreen() {
   return (
     <NavigationContainer>
-      <Tab.Navigator>
+      <Tab.Navigator screenOptions={{}}>
         <Tab.Screen
           name="Home"
           component={HomeScreen}

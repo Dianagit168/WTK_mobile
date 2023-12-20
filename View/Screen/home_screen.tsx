@@ -18,11 +18,7 @@ export default function HomeScreen() {
           leadingIcon={'search'}
           placeHolder={'Find your courses'}
         />
-        <ContentCourse
-          content={'Continue Course'}
-          btn={'See all'}
-          onPress={undefined}
-        />
+        <ContentCourse content={'Continue Course'} />
         <View style={styleWidgetHomeScreen.containerOfChart}>
           <Text> Chart do not complete</Text>
         </View>

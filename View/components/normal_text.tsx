@@ -7,6 +7,7 @@ interface btProp {
   fontSizeT: number;
   paddingVer: number;
   paddingHor: number;
+  numberOfLines: number;
 }
 
 export default function NormalText({
@@ -16,13 +17,15 @@ export default function NormalText({
   backColorI,
   paddingHor,
   paddingVer,
+  numberOfLines,
 }: btProp) {
   return (
     <View>
       <Text
-        numberOfLines={1}
+        numberOfLines={numberOfLines}
         ellipsizeMode="tail"
         style={{
+          textAlign: 'justify',
           borderRadius: 16,
           paddingHorizontal: paddingHor,
           paddingVertical: paddingVer,
