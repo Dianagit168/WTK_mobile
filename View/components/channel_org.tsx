@@ -3,8 +3,19 @@ import React from 'react';
 import brandingColor from './branding_color';
 import BoldText from './bold_text';
 import NormalText from './normal_text';
+interface ChannelOrgProps {
+  logo: String;
+  name: string;
+  subTit: string;
+  nameCol: string;
+}
 
-export default function ChannelOrg() {
+export default function ChannelOrg({
+  logo,
+  name,
+  subTit,
+  nameCol,
+}: ChannelOrgProps) {
   return (
     <View
       style={{
@@ -28,25 +39,26 @@ export default function ChannelOrg() {
             color: brandingColor.white,
             fontSize: 8,
           }}>
-          KOOMPI
+          {logo}
         </Text>
       </View>
       <View style={{marginLeft: 7, width: 150}}>
         <BoldText
-          contentT={'KOOMPI Official'}
-          colorT={brandingColor.blueBlack100}
+          contentT={name}
+          colorT={nameCol}
           backColorI={''}
           fontSizeT={14}
           paddingVer={0}
           paddingHor={0}
         />
         <NormalText
-          contentT={'3k subscribe'}
+          contentT={subTit}
           colorT={brandingColor.blueBlack60}
           backColorI={''}
-          fontSizeT={12}
+          fontSizeT={10}
           paddingVer={0}
           paddingHor={0}
+          numberOfLines={0}
         />
       </View>
     </View>

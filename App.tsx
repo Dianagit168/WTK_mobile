@@ -33,6 +33,10 @@ import DetailVideoScreen from './View/Screen/detail_videos_screen';
 import DetailBook from './View/Screen/detail_book';
 import ReadTheBook from './View/Screen/read_the_book';
 import ReadKaset from './View/Screen/read_kaset';
+import ReadEx from './View/Screen/read_ex';
+
+import CollapsibleExample from './View/Screen/read_ex';
+import GridView from './View/components/grid_view';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -69,7 +73,7 @@ function App(): React.JSX.Element {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
-  return <ReadKaset />;
+  return <MainScreen />;
 }
 
 const styles = StyleSheet.create({

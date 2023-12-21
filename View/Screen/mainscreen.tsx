@@ -17,6 +17,7 @@ import HomeScreen from './home_screen';
 import LibraryScreen from './library_screen';
 import VideoScreen from './video_screen';
 import DetailBook from './detail_book';
+import MenuScreen from './menu_screen';
 
 const Tab = createBottomTabNavigator();
 type TabBarOptions = {
@@ -74,7 +75,7 @@ export default function MainScreen() {
         />
         <Tab.Screen
           name="Menu"
-          component={LibraryScreen}
+          component={MenuScreen}
           options={{
             tabBarIcon: ({}) => {
               return <Menu color="black" size={17} strokeWidth={2.7} />;
