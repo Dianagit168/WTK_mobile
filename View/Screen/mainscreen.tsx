@@ -20,18 +20,18 @@ import DetailBook from './detail_book';
 import MenuScreen from './menu_screen';
 
 const Tab = createBottomTabNavigator();
-type TabBarOptions = {
-  tabBarShowLabel: boolean;
-  headerShown: boolean;
-  tabBarStyle: {
-    position: 'absolute';
-    bottom: number;
-    right: number;
-    left: number;
-    elevation: number;
-    height: number;
-  };
-};
+// type TabBarOptions = {
+//   tabBarShowLabel: boolean;
+//   headerShown: boolean;
+//   tabBarStyle: {
+//     position: 'absolute';
+//     bottom: number;
+//     right: number;
+//     left: number;
+//     elevation: number;
+//     height: number;
+//   };
+// };
 
 export default function MainScreen() {
   return (
@@ -41,6 +41,7 @@ export default function MainScreen() {
           name="Home"
           component={HomeScreen}
           options={{
+            headerShown: false,
             tabBarIcon: ({}) => {
               return <Home color="black" size={17} strokeWidth={2.7} />;
             },
@@ -50,6 +51,7 @@ export default function MainScreen() {
           name="Library"
           component={LibraryScreen}
           options={{
+            headerShown: false,
             tabBarIcon: ({}) => {
               return <Library color="black" size={17} strokeWidth={2.7} />;
             },
@@ -59,6 +61,7 @@ export default function MainScreen() {
           name="Video"
           component={VideoScreen}
           options={{
+            headerShown: false,
             tabBarIcon: ({}) => {
               return <Film color="black" size={17} strokeWidth={2.7} />;
             },
@@ -68,6 +71,7 @@ export default function MainScreen() {
           name="Contents"
           component={ContentScreen}
           options={{
+            headerShown: false,
             tabBarIcon: ({}) => {
               return <Newspaper color="black" size={17} strokeWidth={2.7} />;
             },
@@ -77,6 +81,7 @@ export default function MainScreen() {
           name="Menu"
           component={MenuScreen}
           options={{
+            headerShown: false,
             tabBarIcon: ({}) => {
               return <Menu color="black" size={17} strokeWidth={2.7} />;
             },
@@ -87,11 +92,4 @@ export default function MainScreen() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'white',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+const styles = StyleSheet.create({});

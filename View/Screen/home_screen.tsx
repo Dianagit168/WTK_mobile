@@ -8,11 +8,13 @@ import ContentCourse from '../components/content_course';
 
 export default function HomeScreen() {
   return (
-    <SafeAreaView style={{paddingTop: 15, paddingBottom: 30}}>
+    <SafeAreaView style={{paddingBottom: 30}}>
       <View>
         <HeaderBar />
       </View>
-      <ScrollView style={{marginHorizontal: 20}}>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        style={{marginHorizontal: 20}}>
         <Search
           object={'Explore'}
           leadingIcon={'search'}

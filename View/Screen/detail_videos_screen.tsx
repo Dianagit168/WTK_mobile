@@ -51,7 +51,12 @@ export default function DetailVideoScreen() {
             alignItems: 'center',
             justifyContent: 'space-between',
           }}>
-          <ChannelOrg />
+          <ChannelOrg
+            logo={'WETEKA'}
+            name={'Weteka Official'}
+            subTit={'3k subscribe'}
+            nameCol={brandingColor.blueBlack100}
+          />
 
           <View>
             <TouchableOpacity style={styleForDetailBook.subscribeContainer}>

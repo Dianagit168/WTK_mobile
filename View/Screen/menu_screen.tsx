@@ -7,12 +7,14 @@ import Divider from '../components/devider';
 import {RefreshCw} from 'lucide-react-native';
 import GridView from '../components/grid_view';
 import BtnCustom from '../components/button_custom';
+import HeaderBar from '../components/header_bar';
 
 export default function MenuScreen() {
   return (
     <SafeAreaView>
-      <ScrollView style={{paddingHorizontal: 20}}>
-        <View>
+      <HeaderBar iconSearch={true} isLogo={false} />
+      <ScrollView>
+        <View style={{paddingHorizontal: 20}}>
           <View
             style={{
               flexDirection: 'row',

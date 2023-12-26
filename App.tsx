@@ -37,6 +37,9 @@ import ReadEx from './View/Screen/read_ex';
 
 import CollapsibleExample from './View/Screen/read_ex';
 import GridView from './View/components/grid_view';
+import DemoAppbar from './View/Screen/appbardemo';
+import DemoAppBar from './View/Screen/appbardemo';
+import ProfileAbout from './View/Screen/profile_about';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -73,7 +76,7 @@ function App(): React.JSX.Element {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
-  return <MainScreen />;
+  return <ProfileAbout />;
 }
 
 const styles = StyleSheet.create({

@@ -26,7 +26,7 @@ export default function VideoScreen() {
         <Search
           object={'Explore'}
           leadingIcon={'search'}
-          placeHolder={'Find your course'}
+          placeHolder={'Find your video'}
         />
 
         <CarouselCustom
