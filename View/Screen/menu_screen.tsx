@@ -22,7 +22,6 @@ export default function MenuScreen() {
               alignItems: 'center',
             }}>
             <ChannelOrg
-              logo={'User Logo'}
               name={'Diana Lolz'}
               subTit={'See your profile'}
               nameCol={brandingColor.blue100}
@@ -56,7 +55,7 @@ export default function MenuScreen() {
               </View>
             </View>
           </View>
-          <Divider />
+          <Divider marVer={15} />
           <GridView gridName={'Shortcuts'} langthList={4} />
           <GridView gridName={'Comunity'} langthList={3} />
           <GridView gridName={'Help & Support'} langthList={3} />
@@ -65,7 +64,8 @@ export default function MenuScreen() {
             obj={'Logout'}
             iCol={brandingColor.blue100}
             borderRa={16}
-            isIcon={false}
+            objColor={''}
+            fnOnP={undefined}
           />
         </View>
       </ScrollView>

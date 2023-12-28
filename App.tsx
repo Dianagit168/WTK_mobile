@@ -39,7 +39,10 @@ import CollapsibleExample from './View/Screen/read_ex';
 import GridView from './View/components/grid_view';
 import DemoAppbar from './View/Screen/appbardemo';
 import DemoAppBar from './View/Screen/appbardemo';
-import ProfileAbout from './View/Screen/profile_about';
+import ProfileHome from './View/Screen/profile_home';
+import ProfileOwned from './View/Screen/profile_owned';
+import ProfileFollowing from './View/Screen/profile_following';
+import ProfileEenrollment from './View/Screen/profile_enrollment';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -76,7 +79,7 @@ function App(): React.JSX.Element {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
-  return <ProfileAbout />;
+  return <ProfileEenrollment />;
 }
 
 const styles = StyleSheet.create({

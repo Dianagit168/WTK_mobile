@@ -15,6 +15,14 @@ import {RefreshCw} from 'lucide-react-native';
 import GridView from '../components/grid_view';
 import BtnCustom from '../components/button_custom';
 import HeaderBar from '../components/header_bar';
+import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
+import {NavigationContainer} from '@react-navigation/native';
+
+import DetailVideoScreen from './detail_videos_screen';
+import ReadKaset from './read_kaset';
+
+import Screen2 from './screen2';
+import TopTapBarNav from '../components/top_tapbar';
 
 export default function ProfileAbout() {
   return (
@@ -22,6 +30,7 @@ export default function ProfileAbout() {
       <HeaderBar iconSearch={true} isLogo={false} />
       <ScrollView>
         <CoverAndProfile />
+        <TopTapBarNav />
       </ScrollView>
     </SafeAreaView>
   );

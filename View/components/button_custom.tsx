@@ -5,24 +5,26 @@ import brandingColor from './branding_color';
 import {BookOpen} from 'lucide-react-native';
 interface btnProps {
   obj: string;
+  objColor: string;
   iCol: string;
   borderRa: number;
-  isIcon: boolean;
+  fnOnP: any;
 }
 
 export default function BtnCustom({
   obj,
   iCol,
-  borderRa,
-  isIcon = true,
+  objColor,
+
+  fnOnP,
 }: btnProps) {
   return (
     <View>
-      <TouchableOpacity style={style.btnContainer}>
+      <TouchableOpacity style={[style.btnContainer]} onPress={fnOnP}>
         <BookOpen color={iCol} size={23} strokeWidth={2} />
         <BoldText
           contentT={obj}
-          colorT={brandingColor.white}
+          colorT={objColor}
           backColorI={''}
           fontSizeT={15}
           paddingVer={0}
@@ -36,7 +38,7 @@ const style = StyleSheet.create({
   btnContainer: {
     flexDirection: 'row',
     borderRadius: 16,
-    marginVertical: 20,
+    marginVertical: 10,
     backgroundColor: brandingColor.blue100,
     height: 50,
     alignItems: 'center',

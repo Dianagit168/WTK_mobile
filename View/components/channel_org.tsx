@@ -1,21 +1,16 @@
-import {View, Text} from 'react-native';
+import {View, Text, Image} from 'react-native';
 import React from 'react';
 import brandingColor from './branding_color';
 import BoldText from './bold_text';
 import NormalText from './normal_text';
 interface ChannelOrgProps {
-  logo: String;
+  thumbnail: string;
   name: string;
   subTit: string;
   nameCol: string;
 }
 
-export default function ChannelOrg({
-  logo,
-  name,
-  subTit,
-  nameCol,
-}: ChannelOrgProps) {
+export default function ChannelOrg({name, subTit, nameCol ,thumbnail}: ChannelOrgProps) {
   return (
     <View
       style={{
@@ -24,24 +19,17 @@ export default function ChannelOrg({
         marginTop: 10,
         width: 170,
       }}>
-      <View
+      <Image
+        source={{
+          uri: thumbnail
+        }}
         style={{
           height: 45,
+          resizeMode: 'cover',
           width: 45,
-          backgroundColor: brandingColor.blueBlack100,
           borderRadius: 50,
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}>
-        <Text
-          style={{
-            fontWeight: 'bold',
-            color: brandingColor.white,
-            fontSize: 8,
-          }}>
-          {logo}
-        </Text>
-      </View>
+        }}
+      />
       <View style={{marginLeft: 7, width: 150}}>
         <BoldText
           contentT={name}
